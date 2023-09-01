@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+	<!--HEAD SECTION-->
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale: 1.0">
+		<title>Bootstrap Tutorial</title>
+		<!--Embed Bootstrap framework here-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>		
+	</head>
+	
+	<!--BODY SECTION-->
+	<body>
+	
+		<!--Create a Bootstrap grid: 4 rows-->
+		<div class="container">
+		
+			<!--ROW 1: NAVBAR-->
+			<div class="row bg-primary overflow-visible" style="min-height: 8vh;"> 			
+			
+				<nav class="navbar navbar-expand-lg bg-body-tertiary row">
+				  <div class="container-fluid">
+				  
+					<a class="navbar-brand" href="#">Logo and Tagline</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+					  <span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse z-3" id="navbarText">
+					  <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-end bg-success">					  
+						<li class="nav-item">
+						  <a class="nav-link" aria-current="page" href="#">HOME</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link active" href="#">FORMS</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="#">XML/JSON</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="#">JAVASCRIPT</a>
+						</li>						
+						<li class="nav-item">
+						  <a class="nav-link" href="#">RESEARCH</a>
+						</li>						
+					  </ul>					  
+					</div>
+					
+				  </div>
+				</nav>										
+			</div>
+		
+		
+			<!--ROW 2: 4 BUTTONS-->
+			<div class="row bg-info">
+				<!--Have 2 columns: One for 2 buttons and One for forms -->
+				
+				<!--FIRST COLUMN-->
+				<div class="col-12 col-md-3 border border-danger">
+
+					<div class="row">
+					    <!--Button 1-->
+					  <a class="col-6 col-md-12 btn btn-primary collapsed mt-1 mb-1" 
+							data-bs-toggle="collapse" 
+							href="#multiCollapseExample1" role="button" 
+							aria-expanded="false" 
+							aria-controls="multiCollapseExample1">DEMO 1</a>
+					    <!--Button 2-->
+					  <button class="col-6 col-md-12 btn btn-primary collapsed mt-1 mb-1" type="button" 
+							data-bs-toggle="collapse" 
+							data-bs-target="#multiCollapseExample2" 
+							aria-expanded="false" 
+							aria-controls="multiCollapseExample2">DEMO 2</button> 
+
+						<!--Button 3-->
+					  <button class="col-6 col-md-12 btn btn-primary collapsed mt-1 mb-1" type="button" 
+							data-bs-toggle="collapse" 
+							data-bs-target="#multiCollapseExample3" 
+							aria-expanded="false" 
+							aria-controls="multiCollapseExample3">DEMO 3</button>  
+
+						<!--Button 4-->
+					  <button class="col-6 col-md-12 btn btn-primary collapsed mt-1 mb-1" type="button" 
+							data-bs-toggle="collapse" 
+							data-bs-target="#multiCollapseExample4" 
+							aria-expanded="false" 
+							aria-controls="multiCollapseExample4">DEMO 4</button>  
+							
+					</div>
+
+
+				</div>
+				
+				<!--SECOND COLUMN-->
+				<div class="col-12 col-md-9 border border-primary z-1">
+				
+				    <div class="row">
+					  <div class="col-12">
+						<div class="multi-collapse collapse" id="multiCollapseExample1" style="">
+						  <div class="card card-body">
+							
+							<!--DEMO 1 AREA-->							
+							  <h2 class="bg-warning">EXERCISE 1: CREATE MANUAL SLIDESHOW AND AUTOMATIC SLIDESHOW FOR TOP MOVIES</h2>
+							  <section class="container">
+								<h3>Manual Slideshow: Two buttons</h3>
+								<h4 id="manual-slide-title">The Shawshank Redemption</h4>
+								<img id="manual-slide-image" src="Images/movie0.jpg" height="300px">
+								<br>
+								<button onclick="previousSlide()">PREVIOUS</button>
+								<button onclick="nextSlide()">NEXT</button>           
+							  </section>
+									  
+							  <section class="container">     
+								<h3>Automatical Slideshow: running automatically</h3>
+								<h4 id="auto-slide-title">The Shawshank Redemption</h4>
+								<img id="auto-slide-image" src="Images/movie0.jpg" height="300px">     
+							  </section>
+
+											
+													
+						  </div>
+						</div>
+					  </div>
+
+						<script>
+							//Data: assume we have a list of top 5 movies
+							let topMovies = [
+								{id: 0, title: "The Shawshank Redemption", year: 1994, image_url: "Images/movie0.jpg"},
+								{id: 1, title: "The Godfather ", year: 1972, image_url: "Images/movie1.jpg"},
+								{id: 2, title: "The Dark Knight", year: 2008, image_url: "Images/movie2.jpg"},
+								{id: 3, title: "12 Angry Men", year: 1957, image_url: "Images/movie3.jpg"},
+								{id: 4, title: " Schindler\'s List", year: 1993, image_url: "Images/movie4.jpg"},
+								];
+
+							//Slideshow: Manual
+							let slideIndex = 0;//Initial slide = 0
+							function nextSlide() {
+							  //Change the slide_index
+							  if (slideIndex < topMovies.length - 1) {
+								slideIndex++;
+							  } else {
+								slideIndex = 0;
+							  }
+							  //Update the image title and source for the img
+							  document.getElementById("manual-slide-title").innerHTML = topMovies[slideIndex].title;
+							  document.getElementById("manual-slide-image").src = topMovies[slideIndex].image_url;  
+							}
+
+							function previousSlide() {
+							  //Change the slide_index
+							  if (slideIndex > 0) {
+								slideIndex--;
+							  } else {
+								slideIndex = topMovies.length - 1;
+							  }
+							  //Change the image source for the img
+							  document.getElementById("manual-slide-title").innerHTML = topMovies[slideIndex].title;
+							  document.getElementById("manual-slide-image").src = topMovies[slideIndex].image_url;    
+							}
+							
+							//Slideshow: Automatic
+							let autoSlideIndex = 0;//Initial slide = 0
+							function autoSlideShow() {
+							//Change the slide_index
+							  if (autoSlideIndex < topMovies.length - 1) {
+								autoSlideIndex++;
+							  } else {
+								autoSlideIndex = 0;
+							  }
+							  //Change the image source for the img
+							  document.getElementById("auto-slide-title").innerHTML = topMovies[autoSlideIndex].title;
+							  document.getElementById("auto-slide-image").src = topMovies[autoSlideIndex].image_url;
+							  //Wait 2 seconds
+							  setTimeout(autoSlideShow, 2000);//Auto change slide every 2 seconds
+							}
+							//execute the function when loading the webpage
+							autoSlideShow() // Call to run auto slideshow
+
+
+						</script>
+
+					  <div class="col-12">
+						<div class="multi-collapse collapse" id="multiCollapseExample2" style="">
+						    <div class="card card-body" id="demo-2">
+							
+							<!---DEMO 2 AREA-->
+							<h2>Customize the Webpage: </h2>
+								<label>Select Text Size: </label>
+								<select id="text-size" onchange="customizeText()">  
+									<option value="35px">VERY BIG</option>
+									<option value="25px">BIG</option>
+									<option value="16px">NORMMAL</option>       
+								</select>
+								
+								<br>
+								<label>Select color: </label>
+								<select id="colorOption" onchange="changeColor()">
+									<option></option>
+									<option value="red">RED</option>
+									<option value="green">GREEN</option>
+									<option value="yellow">YELLOW</option>
+									<option value="ivory">IVORY</option>
+									<option value="pink">PINK</option>
+									<option value="purple">PURPLE</option>
+								</select>                   
+								
+								
+								<br><br>
+								<h2>Lorem Ipsum</h2>
+								<img 
+									src="https://www.typingpal.com/images/1/3/a/8/4/13a845e178cb05ecc149ffc850ad9a6eac19f85d-lorem-ipsum.png" 
+									alt="Image"
+									width="300px">
+								<p id="abstract">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."<br>
+									"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+								</p>
+								<p id="detailed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse semper magna id nibh finibus, ultrices molestie tellus venenatis. Curabitur gravida, tortor sit amet molestie consectetur, tortor tortor dictum leo, nec imperdiet neque leo id felis. Duis laoreet, massa in pharetra tempor, lectus turpis venenatis dui, a dictum lacus mi at diam. Cras at eros consectetur ligula dapibus viverra. Pellentesque imperdiet lectus tellus. Pellentesque faucibus diam ac venenatis dictum. Suspendisse scelerisque ultricies lacinia. Integer tristique ipsum nec sagittis porttitor. Quisque ac lacinia massa. Mauris augue augue, iaculis non facilisis ac, fermentum eu magna. Integer mattis ultrices luctus. Proin semper pellentesque eros, vel pretium lacus cursus at. Aliquam fringilla nulla vel pellentesque egestas. Nunc sed elit aliquet nisl aliquet tristique. Mauris accumsan eros at augue rutrum, quis cursus turpis elementum. Duis arcu quam, posuere at nulla et, luctus malesuada nibh.<br>
+									Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec at egestas leo. Maecenas varius malesuada metus, at malesuada massa vulputate et. Ut sit amet est eu sem vestibulum interdum quis ac est. Praesent ipsum nunc, elementum nec convallis et, fermentum eget nunc. Nullam cursus fermentum varius. Duis quis rutrum nisi, in condimentum magna. Cras tristique erat at fermentum tempor. Aenean convallis justo molestie arcu imperdiet venenatis. Sed eget massa rutrum, condimentum elit nec, lobortis magna. Curabitur non maximus mauris. Phasellus ac auctor purus. Phasellus a dignissim elit, nec semper nisi.
+								</p>
+								<button id="expandBtn" onclick="expandText()" value="MORE">MORE</button>            
+
+									</div>
+								</div>
+							  </div>
+							  
+							  <script>
+							  //WEB PAGE CUSTOMIZATION
+								//Read More/less function
+								document.getElementById("detailed").style.display = "none";//Hide content
+								
+								function expandText() {
+									//Find the expandBtn element on HTML file
+									let expandBtn = document.getElementById("expandBtn");
+									
+									//Check whether to expand or collapse text based on the text display on the button
+									if (expandBtn.value.toLowerCase() == "more") {
+										document.getElementById("detailed").style.display = "block";//Show content
+										expandBtn.value = "LESS";
+										expandBtn.textContent = "LESS";
+									} else {
+										document.getElementById("detailed").style.display = "none";//Hide content
+										expandBtn.value = "MORE";
+										expandBtn.textContent = "MORE";
+									}   
+								}   
+
+								//Change text size
+								function customizeText() {
+								//get the selected value
+									let selectedTextSize = document.getElementById("text-size").value;
+									//chance the text style accordingly
+									document.getElementById("abstract").style.fontSize = selectedTextSize;
+									document.getElementById("detailed").style.fontSize = selectedTextSize;
+								}
+
+								//Change background color       
+								function changeColor() {
+									//get the selected color
+									let selectedBGColor = document.getElementById("colorOption").value;
+									//chance the color accordinly
+									document.getElementById("demo-2").style.backgroundColor = selectedBGColor;    
+								}
+
+							  </script>
+							  
+							  
+					  <div class="col-12">
+						<div class="multi-collapse collapse" id="multiCollapseExample3" style="">
+						    <div class="card card-body">
+							
+							<!---DEMO 3 AREA-->
+							<h2 class="bg-warning">DEMO 3: DROPDOWN MENU TO SELECT A MOVIE TO SHOW</h2>
+							  <label>Select Movie: </label>
+							  <select id="my-movieList" onchange="displayMyMovie()">      
+							  </select>
+							  <br>
+							  <section class="container">
+								<h4 id="my-movieTitle">The Shawshank Redemption</h4>
+								<p id="my-movieYear">1994</p>
+								<img id="my-movieImageURL" src="Images/movie0.jpg" height="300px">
+							  </section>
+
+						    </div>
+					    </div>
+					  </div>
+					  
+					  <script>
+						//DROPDOWN MENU TO SELECT MOVIE
+						//Populate the select "options" with all the movies in the array when the page is loaded
+						function loadMyMovies() {
+						  let movieSelect = document.getElementById("my-movieList");
+						  for(var i=0; i < topMovies.length; i++) {
+							//Create a new child HTML node/element as "<option>" (as a child node)
+							let node = document.createElement("option");
+							//Assign option "text content" and "value" to this new node
+							node.value = topMovies[i].id.toString();
+							node.textContent = topMovies[i].title.toString(); 
+							//Append the above HTML node (option) to the parent node "movieList"  
+							movieSelect.appendChild(node);        
+						  }   
+						  //Set the first movie as selected option in drop-down list
+						  movieSelect.selectedIndex= "0"; 
+						}
+						//call to execute this function when loading the webpage
+						loadMyMovies();
+
+						//When user select an option in the dropdown menu (select), display that option
+						function displayMyMovie() {
+						  //Get the selected movie "option value"
+						  let selectedMovieIndex = document.getElementById("my-movieList").value; 
+						  document.getElementById("my-movieTitle").innerHTML = topMovies[selectedMovieIndex].title;
+						  document.getElementById("my-movieYear").innerHTML = topMovies[selectedMovieIndex].year;
+						  document.getElementById("my-movieImageURL").src = topMovies[selectedMovieIndex].image_url;
+						}
+					  </script>
+					  
+					  <div class="col-12">
+						<div class="multi-collapse collapse" id="multiCollapseExample4" style="">
+						    <div class="card card-body">
+							
+							<!---DEMO 4 AREA-->
+							<h2>DEMO 4: ....</h2>
+							
+							<section id="rssFeed" class="row"></section>	
+							
+						    </div>
+					    </div>
+					  </div>
+					  
+										
+					</div>				
+				</div>
+			
+			</div>
+			
+			
+			<!--ROW 3: FOOTER-->
+			<div class="row bg-warning">
+				<!--Col 1: social media icons-->
+				<div class="col-12 col-md-4">
+					<p>Social Media Icons</p>
+				</div>
+				<!--Col 2: copy right-->
+				<div class="col-8 col-md-4 text-center">
+					<p>@2023 by Daniel Dang</p>
+				</div>	
+				<!--Col 3: privacy policy-->
+				<div class="col-4 col-md-4 text-end">
+					<p>Privacy Policy</p>
+				</div>				
+			</div>
+		
+		</div>	
+		
+		
+		<script>		
+			function loadRSS() {
+			  //Use CORS API website as proxy
+			  let proxy = 'https://cors-anywhere.herokuapp.com/';
+
+			  //Declare the URL where we fetch RSS file
+			  let url = "https://www.nasa.gov/rss/dyn/educationnews.rss";
+			  //NASA RSS: https://www.nasa.gov/content/nasa-rss-feeds
+			  //     NASA education news: https://www.nasa.gov/rss/dyn/educationnews.rss
+			  //CNN RSS: https://edition.cnn.com/services/rss/
+			  //    CNN RSS top stories: http://rss.cnn.com/rss/edition.rss
+			  //BBC RSS: http://feeds.bbci.co.uk/news/rss.xml
+
+			  //Create an XMLHttpRequest Object to request XML file (data) through HTTP protocol
+			  let xhttp = new XMLHttpRequest();
+			  xhttp.open("GET", proxy + url, true);
+			  xhttp.send();
+
+			  //Process RSS file when it has been loaded successfully		
+			  xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+				  //Load XML file as "XML" format and parse/process it by calling function parseRSS()
+				  let rss = this.responseXML;
+				  parseRSS(rss);	}
+			  };
+			}
+
+			function parseRSS(rss) {
+			  //Load all "items" inside the RSS document, each item is a news
+			  let items = rss.getElementsByTagName("item");			
+			  let rssContent = "";//varible "rssContent" is used to store rss content in HTML format
+
+			  //Loop through all "items" (news) and extract child node content: "title", "link", "description" and "pubdate"
+			  for (let i = 0; i< items.length; i++) {
+				let nodes = items[i].children;
+				//Extract "title", "link", "description" and "pubdate" of each "node"
+				let title, pubdate, description, link;
+				for (let j = 0; j < nodes.length; j++) {
+				  if (nodes[j].tagName == "title") {
+					title = nodes[j].childNodes[0].nodeValue;
+				  } else if (nodes[j].tagName == "link") {
+					link = nodes[j].childNodes[0].nodeValue;
+				  } else if (nodes[j].tagName == "description") {
+					description = nodes[j].childNodes[0].nodeValue;
+				  } else if (nodes[j].tagName == "pubDate") {
+					pubdate = nodes[j].childNodes[0].nodeValue;
+				  }
+				}
+
+				//Format the extracted information above in HTML format and append it to the "rssContent" variable
+				//each item (news) is wrapped inside a <div>
+				rssContent += `<div class="col-12 col-md-6">
+									<div style="background-color: lightgray; margin: 1em; height: 95%">
+										<h3>${title}</h3>
+										<p style="font-style: italic;">${pubdate}</p>
+										<p>${description}</p>
+										<p><a href="${link}">Read more</a></p>
+									</div>	
+								</div>`;							
+            }
+
+			  //Display the "rssContent" on the webpage
+			  document.getElementById("rssFeed").innerHTML = rssContent;
+			}		
+		</script>
+		
+		
+	</body>
+</html>
+
+
+
+
+
+
+

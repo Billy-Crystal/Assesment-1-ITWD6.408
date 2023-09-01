@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<!--HEAD SECTION-->
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale: 1.0">
+		<title>Bootstrap Tutorial</title>
+		<!--Embed Bootstrap Framework here-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+		
+	</head>
+	
+	<!--BODY SECTION-->
+	<body>
+		<!--Create a Bootstrap Grid: 4 rows-->
+		<div class="container">
+		
+			<!--Row 1 - Nav Bar Row-->
+			<div class="row bg-primary overflow-visible" style="min-height: 8vh">
+			
+			<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			  <div class="container-fluid">
+				<a class="navbar-brand" href="#">Logo and Tagline</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse z-3" id="navbarText">
+				  <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-end bg-success">
+					<li class="nav-item">
+					  <a class="nav-link" aria-current="page" href="#">HOME</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link active" href="#">FORMS</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#">XML/JSON</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#">JAVASCRIPT</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#">RESEARCH</a>
+					</li>
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+						
+			</div>
+			
+			<!--Row 2 - Button and Form-->
+			<div class="row bg-info">
+				<!--Have 2 columns: One for 2 buttons, one for form-->
+				<!--FIRST COLUMN-->
+				<div class="col-12 col-md-3 border border-danger" style="background-color: pink;">
+					<!--BUTTONS-->
+						<div class="row">
+						<!--Button 1-->   <!--here to fix toggle forms-->
+						  <a class="col-6 col-md-12 btn btn-primary collapsed" 
+						  data-bs-toggle="collapse" 
+						  href="#multiCollapseExample1" 
+						  role="button" 
+						  aria-expanded="false" 
+						  aria-controls="multiCollapseExample1">HTML FORM</a>
+						<!--Button 2-->
+						  <button class="col-6 col-md-12 btn btn-primary collapsed" 
+						  type="button" 
+						  data-bs-toggle="collapse" 
+						  data-bs-target="#multiCollapseExample2" 
+						  aria-expanded="false" 
+						  aria-controls="multiCollapseExample2">GOOGLE FORM</button>
+						</div>	
+				</div>
+				<!--Second Column-->
+				<div class="col-12 col-md-9 border border-primary z-1">
+					<div class="col-12">
+						<div class="multi-collapse" id="multiCollapseExample1" style="">
+						  <div class="card card-body">
+							<!--HTML FORM-->
+							<form name="phone-survey" method="post" action="https://danieldangs.com/itwd6408/handle_survey.php">
+								<!--First Input-->
+							  <div class="row mb-3">
+								<label for="fname" class="col-sm-2 col-md-3 col-form-label">First Name</label>
+								<div class="col-sm-10 col-md-9">
+								  <input type="text" class="form-control" id="fname" required>
+								</div>
+							  </div>
+								<!--Second Input-->
+							  <div class="row mb-3">
+								<label for="lname" class="col-sm-2 col-md-3 col-form-label">Last Name</label>
+								<div class="col-sm-10 col-md-9">
+								  <input type="text" class="form-control" id="lname" required>
+								</div>
+							  </div>
+							  
+							  <div class="lead fw-bold">Address
+							  </div>
+							  <div class="row mb-3">
+								<label for="line1" class="col-sm-2 col-md-3 col-form-label">Line 1</label>
+								<div class="col-sm-10 col-md-9">
+								  <input type="text" class="form-control" id="line1" required>
+								</div>
+							  </div>
+							  <div class="row mb-3">
+								<label for="line2" class="col-sm-2 col-md-3 col-form-label">Line 2</label>
+								<div class="col-sm-10 col-md-9">
+								  <input type="text" class="form-control" id="line2">
+								</div>
+							  </div>
+							  <div class="row mb-3">
+								<label for="Town" class="col-sm-2 col-md-3 col-form-label">Town/City</label>
+								<div class="col-sm-10 col-md-9">
+								  <input type="text" class="form-control" id="town" required>
+								</div>
+							  </div>
+							  
+							  <fieldset class="row mb-3">
+								<legend class="col-form-label col-12 col-md-3 pt-0">Gender</legend>
+								<div class="col-12 col-md-9">
+								<!--Male-->
+								  <div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+									<label class="form-check-label" for="gridRadios1">
+									  Male
+									</label>
+								  </div>
+								<!--Female-->
+								  <div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+									<label class="form-check-label" for="gridRadios2">
+									  Female
+									</label>
+								  </div>
+								<!--Other-->
+								  <div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+									<label class="form-check-label" for="gridRadios3">
+									  Other
+									</label>
+								  </div>
+								</div>
+							  </fieldset>
+							
+							<!--Checkbox Group-->
+							
+							<fieldset class="row mb-3">
+							<legend class="col-form-label col-12 col-md-3 pt-0">Mobile Phone Type</legend>
+							<div class="col-12 col-md-9">
+								<div class="form-check form-check-inline">
+								  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+								  <label class="form-check-label" for="inlineCheckbox1">Windows</label>
+								</div>
+								<div class="form-check form-check-inline">
+								  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+								  <label class="form-check-label" for="inlineCheckbox2">Apple</label>
+								</div>
+								<div class="form-check form-check-inline">
+								  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+								  <label class="form-check-label" for="inlineCheckbox3">Android</label>
+								</div>
+								<div class="form-check form-check-inline">
+								  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
+								  <label class="form-check-label" for="inlineCheckbox4">Other</label>
+								</div>
+							</div>
+							</fieldset>
+							<!--Drop down menu-->
+							<fieldset class="row mb-3">
+								<legend class="col-form-label col-12 col-md-3 pt-0">Mobile Provider</legend>
+									<div class="col-12 col-md-9">
+										<select class="form-select" aria-label="Default select example">
+										  <option value="0" selected>None</option>
+										  <option value="1">Spark</option>
+										  <option value="2">One NZ</option>
+										  <option value="3">NOW</option>
+										  <option value="4">Other</option>
+										</select>
+									</div>
+							</fieldset>
+							
+							<fieldset class="row mb-3">
+								<legend class="col-form-label col-12 col-md-3 pt-0">Do you use your phone for study? Please explain:</legend>
+								<div class="col-12 col-md-9">
+									<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+								</div>
+							</fieldset>
+							
+							
+							
+						<!--	  
+							  <div class="row mb-3">
+								<div class="col-sm-10 offset-sm-2 col-md-9 offset-md-3">
+								  <div class="form-check">
+									<input class="form-check-input" type="checkbox" id="gridCheck1">
+									<label class="form-check-label" for="gridCheck1">
+									  Example checkbox
+									</label>
+								  </div>
+								</div>
+							  </div>
+							  
+						-->	  
+						
+						<!--Buttons-->
+							<fieldset class="row mb-3">
+								<legend class="col-form-label col-12 col-md-3 pt-0"></legend>
+								<div class="col-12 col-md-9">
+								<button type="reset" class="btn btn-warning">RESET</button>
+								<button type="submit" class="btn btn-primary">SUBMIT</button>
+								</div>
+							</fieldset>
+						
+							  
+							  
+							  
+							</form>
+						  </div>
+						</div>
+					  </div>
+					  
+					  
+					  <div class="col-12">
+						<div class="multi-collapse collapse" id="multiCollapseExample2" style="">
+						  <div class="card card-body">
+							<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSff_w7GCVN1iZQPFNq9pG_Z0k5rFkA_sZFwY8IMSnwPPv672A/viewform?embedded=true" 
+							width="auto" height="1145" 
+							frameborder="0" marginheight="0" 
+							marginwidth="0">Loading…</iframe>
+						  </div>
+						</div>
+					  </div>
+				</div>
+			</div>
+			
+			
+			<!--Row 3 - Footer-->
+			<div class="row bg-warning">
+				<!--Col 1: Social media icon-->
+				<div class="col-12 col-sm-12 col-md-4">
+					<p>Social Media icons</p>
+				</div>
+				<!--Col 2: Copyright-->
+				<div class="col-8 col-sm-8 col-md-4 text-center">
+					<p>@2023 Created by Liam Palmers</p>
+				</div>
+				<!--Col 3: Privacy Policy-->
+				<div class="col-4 col-sm-4 col-md-4 text-end">
+					<p>Privacy Policy</p>
+				</div>
+			</div>
+			
+		</div>
+	
+	</body>
+	
+
+	
+</html>
