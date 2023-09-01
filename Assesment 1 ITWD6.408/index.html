@@ -1,180 +1,211 @@
 <!DOCTYPE html>
 <html>
-	<!--HEAD SECTION-->
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale: 1.0">
-		<title>Bootstrap Tutorial</title>
-		<!--Embed Bootstrap Framework here-->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-		
-	</head>
-	
-	<!--BODY SECTION-->
-	<body>
-		<!--Create a Bootstrap Grid: 4 rows-->
-		<div class="container">
-		
-			<!--Nav Bar Row-->
-			<div class="row bg-primary overflow-visible" style="height: 6vh">
-			
-			<nav class="navbar navbar-expand-lg bg-body-tertiary">
-			  <div class="container-fluid">
-				<a class="navbar-brand" href="#">Logo and Tagline</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-				  <span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarText">
-				  <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-end bg-success">
-					<li class="nav-item">
-					  <a class="nav-link active" aria-current="page" href="#">HOME</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">FORMS</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">XML/JSON</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">JAVASCRIPT</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="#">RESEARCH</a>
-					</li>
-				  </ul>
-				</div>
-			  </div>
-			</nav>
-						
-			</div>
-			
-			<!--Row 1-->
-			<div class="row bg-info">
-				<!--Have only one column-->
-				<div class="col-12 border border-danger">
-					<h1 class="text-center text-warning p-3">Bootstrap Tutorial</h1>
-					
-					<div class="container">
-						<h2>Bootstrap: Topography</h2>
-						<h3 class="text-center text-danger">Lorem Ipsum</h3>
-						<img class="img-fluid d-block mx-auto" src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png">
-						<p>Lorem ipsum dolor sit amet, 
-						consectetur adipiscing elit, sed do eiusmod tempor 
-						incididunt ut labore et dolore magna aliqua. Ut enim 
-						ad minim veniam, quis nostrud exercitation ullamco 
-						laboris nisi ut aliquip ex ea commodo consequat. 
-						Duis aute irure dolor in reprehenderit in voluptate 
-						velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, 
-						sunt in culpa qui officia deserunt mollit anim id 
-						est laborum.
-						</p>
-					</div>
-					
-				</div>
-			</div>
-			<!--Row 2-->
-			<div class="row bg-secondary">
-				<!--Divide into 2 column-->
-				<div class="col-sm-12 col-md-6 col-lg-6 border border-danger">
-					<div class="row">
-						<div class="col-sm-12 col-md-12">
-							<h1>My Bio</h1>
-						</div>
-						
-						<div class="col-sm-12 col-md-3 d-flex align-items-center">
-							<img src="Images/portrait-icon.jpg" alt="Portrait" class="img-fluid d-block">
-						</div>
-						
-						<div class="col-sm-12 col-md-9">
-							<p>Lorem ipsum dolor sit amet, 
-							consectetur adipiscing elit, sed do eiusmod tempor 
-							incididunt ut labore et dolore magna aliqua. Ut enim 
-							ad minim veniam, quis nostrud exercitation ullamco 
-							laboris nisi ut aliquip ex ea commodo consequat. 
-							Duis aute irure dolor in reprehenderit in voluptate 
-							velit esse cillum dolore eu fugiat nulla pariatur. 
-							Excepteur sint occaecat cupidatat non proident, 
-							sunt in culpa qui officia deserunt mollit anim id 
-							est laborum.
-							</p>
-						</div>
-					</div>
-				
-				</div>
-				<div class="col-sm-12 col-md-6 col-lg-6 border border-danger">
-				<h1>My Web Technologies</h1>
-				<h2>My top 5 Web Technologies</h2>
-				<ol>
-				<li>Code Editor: Notepad ++</li>
-				<li>Hosting: Github</li>
-				<li>Browser: Chrome</li>
-				<li>Frameworks: Bootstrap, ReactJS, JQuery</li>
-				<li>Trio Web Language: HTML, CSS, JS</li>
-				</ol>
-				</div>
-			</div>
-			<!--Row 3-->
-			<div class="row bg-primary">
-				<!--Divide into 3 column-->
-				<div class="col-12">
-					<h1>My Web Development Competenices</h1>
-				
-				</div>
-				
-				<div class="col-sm-12 col-md-4 border border-danger">
-				<h1>HTML-5</h1>
-				<p>Flipbox</p>
-				</div>
-				
-				<div class="col-sm-12 col-md-4 border border-danger">
-				<h1>CSS-3</h1>
-				<p>Flipbox</p>
-				</div>
-				
-				<div class="col-sm-12 col-md-4 border border-danger">
-				<h1>JavaScript-6</h1>
-				<p>Flipbox</p>
-				</div>
-			</div>
-			<!--Row 4-->
-			<div class="row bg-success">
-				<!--Divide into 1 column-->
-				<div class="col-12 border border-danger">Column-1
-					<h1>Statement Of Authenticity</h1>
-					<p>“I confirm that:
-						This is an original assessment and is entirely my 
-						own work.
-						It contains no material previously published 
-						or written by another person or myself except 
-						where due acknowledgement is made in the text.
-						No material which to a substantial extent, has 
-						been submitted for any other academic course, 
-						is included without acknowledgement.”
-					</p>
-				</div>
-				
-			</div>
-			<!--Footer-->
-			<div class="row bg-warning">
-				<!--Col 1: Social media icon-->
-				<div class="col-12 col-sm-12 col-md-4">
-					<p>Social Media icons</p>
-				</div>
-				<!--Col 2: Copyright-->
-				<div class="col-8 col-sm-8 col-md-4 text-center">
-					<p>@2023 Created by Liam Palmers</p>
-				</div>
-				<!--Col 3: Privacy Policy-->
-				<div class="col-4 col-sm-4 col-md-4 text-end">
-					<p>Privacy Policy</p>
-				</div>
-			</div>
-			
-		</div>
-	<!--Embed the Javascript file here-->
-	<script src="JS/javascript.js"></script>
+    <!--HEAD SECTION-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale: 1.0"
+        />
+        <title>Bootstrap Tutorial</title>
+        <!--Embed Bootstrap Framework here-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"
+        ></script>
+        <!--Embed css here-->
+        <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    </head>
 
-	</body>
+    <!--BODY SECTION-->
+    <body>
+        <!--Create a Bootstrap Grid: 4 rows-->
+        <div class="container">
+            <!--Nav Bar Row-->
+            <div class="row bg-primary overflow-visible" style="height: 6vh">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Logo and Tagline</a>
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarText"
+                            aria-controls="navbarText"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul
+                                class="navbar-nav me-auto mb-2 mb-lg-0 text-end bg-success"
+                            >
+                                <li class="nav-item">
+                                    <a
+                                        class="nav-link active"
+                                        aria-current="page"
+                                        href="#"
+                                        >HOME</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">FORMS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">XML/JSON</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">JAVASCRIPT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">RESEARCH</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!--Row 1-->
+            <div class="row bg-info">
+                <!--Have only one column-->
+                <div class="col-12 border border-danger">
+                    <h1 class="text-center text-warning p-3">
+                        Bootstrap Tutorial
+                    </h1>
+
+                    <div class="container">
+                        <h2>Bootstrap: Topography</h2>
+                        <h3 class="text-center text-danger">Lorem Ipsum</h3>
+                        <img
+                            class="img-fluid d-block mx-auto"
+                            src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png"
+                        />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--Row 2-->
+            <div class="row bg-secondary">
+                <!--Divide into 2 column-->
+                <div class="col-sm-12 col-md-6 col-lg-6 border border-danger">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <h1>My Bio</h1>
+                        </div>
+
+                        <div
+                            class="col-sm-12 col-md-3 d-flex align-items-center"
+                        >
+                            <img
+                                src="Images/portrait-icon.jpg"
+                                alt="Portrait"
+                                class="img-fluid d-block"
+                            />
+                        </div>
+
+                        <div class="col-sm-12 col-md-9">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in
+                                reprehenderit in voluptate velit esse cillum
+                                dolore eu fugiat nulla pariatur. Excepteur sint
+                                occaecat cupidatat non proident, sunt in culpa
+                                qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 border border-danger">
+                    <h1>My Web Technologies</h1>
+                    <h2>My top 5 Web Technologies</h2>
+                    <ol>
+                        <li>Code Editor: Notepad ++</li>
+                        <li>Hosting: Github</li>
+                        <li>Browser: Chrome</li>
+                        <li>Frameworks: Bootstrap, ReactJS, JQuery</li>
+                        <li>Trio Web Language: HTML, CSS, JS</li>
+                    </ol>
+                </div>
+            </div>
+            <!--Row 3-->
+            <div class="row bg-primary">
+                <!--Divide into 3 column-->
+                <div class="col-12">
+                    <h1>My Web Development Competenices</h1>
+                </div>
+
+                <div class="col-sm-12 col-md-4 border border-danger">
+                    <h1>HTML-5</h1>
+                    <p>Flipbox</p>
+                </div>
+
+                <div class="col-sm-12 col-md-4 border border-danger">
+                    <h1>CSS-3</h1>
+                    <p>Flipbox</p>
+                </div>
+
+                <div class="col-sm-12 col-md-4 border border-danger">
+                    <h1>JavaScript-6</h1>
+                    <p>Flipbox</p>
+                </div>
+            </div>
+            <!--Row 4-->
+            <div class="row bg-success">
+                <!--Divide into 1 column-->
+                <div class="col-12 border border-danger">
+                    Column-1
+                    <h1>Statement Of Authenticity</h1>
+                    <p>
+                        “I confirm that: This is an original assessment and is
+                        entirely my own work. It contains no material previously
+                        published or written by another person or myself except
+                        where due acknowledgement is made in the text. No
+                        material which to a substantial extent, has been
+                        submitted for any other academic course, is included
+                        without acknowledgement.”
+                    </p>
+                </div>
+            </div>
+            <!--Footer-->
+            <div class="row bg-warning">
+                <!--Col 1: Social media icon-->
+                <div class="col-12 col-sm-12 col-md-4">
+                    <p>Social Media icons</p>
+                </div>
+                <!--Col 2: Copyright-->
+                <div class="col-8 col-sm-8 col-md-4 text-center">
+                    <p>@2023 Created by Liam Palmers</p>
+                </div>
+                <!--Col 3: Privacy Policy-->
+                <div class="col-4 col-sm-4 col-md-4 text-end">
+                    <p>Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+        <!--Embed the Javascript file here-->
+        <script src="JS/javascript.js"></script>
+    </body>
 </html>
