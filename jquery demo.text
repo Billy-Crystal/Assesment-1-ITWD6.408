@@ -1,0 +1,73 @@
+
+
+<!--CSS Manipulation-->
+
+<h1>JQUERY DEMO</h1>
+
+<button id="hideBtn">HIDE</button>
+
+<button id="showBtn">SHOW</button>
+
+<div id="content-area">
+
+	THIS IS THE CONTENT OF THE WEBSITE
+
+</div>
+
+
+<script>
+
+	//Change styles for the h1
+
+	$("h1").css('background', 'gray');
+
+	$("h1").css('color', 'red');
+
+	$("h1").css({
+
+		'padding': '50px',
+
+		'text-align': 'center',
+
+		'border': '2px solid green'
+
+	});
+
+
+	//Add styles to the "button" and "content-area"
+
+	jQuery("#hideBtn").css('padding', '40px');
+
+	jQuery("#showBtn").css('padding', '40px');
+
+
+	jQuery("#content-area").css({
+
+		'padding': '60px',
+
+		'background': 'yellow',	
+
+		'text-align': 'center'			
+
+	});
+
+
+	//Add "click" event "single click" to the button
+
+	$("#hideBtn").click(function(){
+
+		//Hide the content-area
+
+		$("#content-area").hide();
+
+	});
+
+
+	$("#showBtn").click(function(){
+
+		$("#content-area").show();
+
+	});
+
+
+</script>
