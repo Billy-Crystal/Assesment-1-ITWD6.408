@@ -163,6 +163,42 @@
                         >
                             DEMO 4
                         </button>
+                        <!--Button 5-->
+                        <button
+                            style="
+                                color: #2b00f6;
+                                border: solid 1px black;
+                                font-family: 'Times New Roman';
+                                font-size: large;
+                            "
+                            class="col-6 col-md-12 btn collapsed mt-1 mb-1"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#multiCollapseExample5"
+                            aria-expanded="false"
+                            aria-controls="multiCollapseExample5"
+                            id="button5"
+                        >
+                            DEMO 5
+                        </button>
+                        <!--Button 6-->
+                        <button
+                            style="
+                                color: #2b00f6;
+                                border: solid 1px black;
+                                font-family: 'Times New Roman';
+                                font-size: large;
+                            "
+                            class="col-6 col-md-12 btn collapsed mt-1 mb-1"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#multiCollapseExample6"
+                            aria-expanded="false"
+                            aria-controls="multiCollapseExample6"
+                            id="button6"
+                        >
+                            DEMO 6
+                        </button>
                     </div>
                 </div>
 
@@ -364,8 +400,28 @@
                                 <div class="card card-body">
                                     <!---DEMO 4 AREA-->
                                     <h2>DEMO 4: ....</h2>
-
-                                    <section id="rssFeed" class="row"></section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div
+                                class="multi-collapse collapse"
+                                id="multiCollapseExample5"
+                            >
+                                <div class="card card-body">
+                                    <!---DEMO 5 AREA-->
+                                    <h2>DEMO 5: ....</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div
+                                class="multi-collapse collapse"
+                                id="multiCollapseExample6"
+                            >
+                                <div class="card card-body">
+                                    <!---DEMO 6 AREA-->
+                                    <h2>DEMO 6: ....</h2>
                                 </div>
                             </div>
                         </div>
@@ -407,7 +463,7 @@
                 </div>
                 <!--Col 2: copy right-->
                 <div class="col-8 col-md-4 text-center">
-                    <p>@2023 by Daniel Dang</p>
+                    <p>@2023 by Liam Palmers</p>
                 </div>
                 <!--Col 3: privacy policy-->
                 <div class="col-4 col-md-4 text-end">
@@ -440,9 +496,9 @@
                         hideAllScreens(); // Hide all screens
                         $("#multiCollapseExample2").addClass("show"); // Show Form 2
                         $(this).addClass("selected"); // Add 'selected' class to the clicked button
-                        $("#button1, #button3, #button4").removeClass(
-                            "selected"
-                        ); // Remove 'selected' class from other buttons
+                        $(
+                            "#button1, #button3, #button4, #button5, #button6"
+                        ).removeClass("selected"); // Remove 'selected' class from other buttons
                     }
                 });
 
@@ -451,9 +507,9 @@
                         hideAllScreens(); // Hide all screens
                         $("#multiCollapseExample3").addClass("show"); // Show Form 3
                         $(this).addClass("selected"); // Add 'selected' class to the clicked button
-                        $("#button1, #button2, #button4").removeClass(
-                            "selected"
-                        ); // Remove 'selected' class from other buttons
+                        $(
+                            "#button1, #button2, #button4, #button5, #button6"
+                        ).removeClass("selected"); // Remove 'selected' class from other buttons
                     }
                 });
 
@@ -462,9 +518,31 @@
                         hideAllScreens(); // Hide all screens
                         $("#multiCollapseExample4").addClass("show"); // Show Form 4
                         $(this).addClass("selected"); // Add 'selected' class to the clicked button
-                        $("#button1, #button2, #button3").removeClass(
-                            "selected"
-                        ); // Remove 'selected' class from other buttons
+                        $(
+                            "#button1, #button2, #button3, #button5, #button6"
+                        ).removeClass("selected"); // Remove 'selected' class from other buttons
+                    }
+                });
+
+                $("#button5").on("click", function () {
+                    if (!$(this).hasClass("selected")) {
+                        hideAllScreens(); // Hide all screens
+                        $("#multiCollapseExample5").addClass("show"); // Show Form 5
+                        $(this).addClass("selected"); // Add 'selected' class to the clicked button
+                        $(
+                            "#button1, #button2, #button3, #button4, #button6"
+                        ).removeClass("selected"); // Remove 'selected' class from other buttons
+                    }
+                });
+
+                $("#button6").on("click", function () {
+                    if (!$(this).hasClass("selected")) {
+                        hideAllScreens(); // Hide all screens
+                        $("#multiCollapseExample6").addClass("show"); // Show Form 6
+                        $(this).addClass("selected"); // Add 'selected' class to the clicked button
+                        $(
+                            "#button1, #button2, #button3, #button4, #button5"
+                        ).removeClass("selected"); // Remove 'selected' class from other buttons
                     }
                 });
 

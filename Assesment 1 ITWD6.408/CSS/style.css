@@ -80,6 +80,7 @@
     justify-content: center;
     padding: 5px;
     float: top;
+    font-family: "Lucida Handwriting", "Courier New";
 }
 
 .flip-box img {
@@ -113,8 +114,9 @@
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
-    background-color: #bbb;
     color: black;
+    border: solid 3px #449284;
+    background-color: #b1e2e7;
 }
 /* position and Style the back side */
 .flip-box-back {
@@ -123,21 +125,39 @@
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
-    background-color: dodgerblue;
+    border: solid 3px #449284;
+    background-color: #b1e2e7;
     color: white;
     transform: rotateY(180deg);
+}
+
+.flip-box-back div h2 {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.centeredstars {
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .flipboxparentdivresearch {
     justify-content: center;
     align-items: center;
-    background-color: #cdeb8b;
 }
 
 .flip-boxresearch {
     background-color: transparent;
     width: 300px;
-    height: 260px;
+    height: 380px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     width: 30%;
     display: inline-block;
@@ -146,7 +166,7 @@
 }
 
 .flip-boxresearch h2 {
-    color: #0107ce;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,10 +175,9 @@
 }
 
 .flip-boxresearch img {
-    border-radius: 50%;
-    border: 5px solid #000000;
     height: auto;
-    max-width: 150px;
+    max-width: 90%;
+    max-height: 60%;
     margin: 5px;
     float: bottom;
 }
@@ -185,9 +204,20 @@
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
-    background-color: #bbb;
+    background-color: #ffe6cd;
     color: black;
+    border: 2px solid #c19923;
 }
+
+.flip-box-frontresearch img {
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 /* position and Style the back side */
 .flip-box-backresearch {
     position: absolute;
@@ -195,9 +225,40 @@
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
-    background-color: dodgerblue;
-    color: white;
+    background-color: #ffe6cd;
+    color: black;
     transform: rotateY(180deg);
+    overflow: scroll;
+    border: 2px solid #c19923;
+    padding: 10px;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar:horizontal {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    border: 1px solid #c19923;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c19923;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c19923;
+}
+
+.checked {
+    color: orange;
 }
 
 /*Media Query*/
@@ -217,15 +278,15 @@
 @media only screen and (max-width: 426px) {
 }
 
+@media only screen and (min-width: 769px) {
+}
+
 @media only screen and (max-width: 767px) {
     .xmlrules {
         height: auto;
     }
 
     .flip-box {
-        width: 90%;
-    }
-    .flip-boxresearch {
         width: 90%;
     }
 }
@@ -236,19 +297,26 @@
     }
 }
 
+@media only screen and (min-width: 800px) and (max-width: 991px) {
+    .flip-box h2 {
+        font-size: 25px;
+    }
+}
+
 @media only screen and (min-width: 1023px) {
     .xmlrules {
         height: 440px;
     }
-}
-
-@media only screen and (min-width: 1439px) {
-    .xmlrules {
-        height: 380px;
+    .webhostingtext {
+        font-size: 25px;
     }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (max-width: 1198px) {
+    .flip-boxresearch {
+        width: 90%;
+        max-width: 500px;
+    }
 }
 
 @media only screen and (min-width: 1439px) {
@@ -265,6 +333,7 @@
     .flip-box {
         height: 180px;
     }
+    /*
     .flip-boxresearch h2 {
         float: left;
         position: absolute;
@@ -275,7 +344,8 @@
         position: absolute;
         top: 7%;
     }
-    .flip-boxresearch {
-        height: 180px;
+    */
+    .xmlrules {
+        height: 380px;
     }
 }
