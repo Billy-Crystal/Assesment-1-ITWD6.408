@@ -239,30 +239,41 @@ loadComments();
 
 //----------
 //Add a new comment
-function addComment() {
-    //Get entered value/data by user
-    let enteredCommentName = document.getElementById("comment_name").value;
-    let enteredCommentText = document.getElementById("comment_text").value;
 
-    //Add this new comment to the array
+function addComment() {
+    // Get entered value/data by user
+    let enteredCommentName = document
+        .getElementById("comment_name")
+        .value.trim();
+    let enteredCommentText = document
+        .getElementById("comment_text")
+        .value.trim();
+
+    // Check if the input fields are empty or contain only whitespace
+    if (enteredCommentName === "" || enteredCommentText === "") {
+        alert("Please enter both a name and a comment.");
+        return; // Stop execution if fields are empty
+    }
+
+    // Add this new comment to the array
     allComments.push({ name: enteredCommentName, comment: enteredCommentText });
     alert("Thank you for your comment!");
 
-    //Display this new comment on HTML page
-    //Create a new child HTML node/element as "<p>" (paragraph) (as a child node)
+    // Display this new comment on HTML page
+    // Create a new child HTML node/element as "<p>" (paragraph) (as a child node)
     let node = document.createElement("P");
-    //Create a new TextNode
+    // Create a new TextNode
     let textnode = document.createTextNode(
         enteredCommentName + ": " + enteredCommentText
     );
-    //Append the content (created TextNode) to the HTML Node (child)
+    // Append the content (created TextNode) to the HTML Node (child)
     node.appendChild(textnode);
-    //Get the id of parent node "comment-list"
-    let parrent_node = document.getElementById("comment-list");
-    //Append the above child HTML node to the parent node
-    parrent_node.appendChild(node);
+    // Get the id of parent node "comment-list"
+    let parent_node = document.getElementById("comment-list");
+    // Append the above child HTML node to the parent node
+    parent_node.appendChild(node);
 
-    //Clear comment box
+    // Clear comment box
     document.getElementById("comment_name").value = "";
     document.getElementById("comment_text").value = "";
 }
