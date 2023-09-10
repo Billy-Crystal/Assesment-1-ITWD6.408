@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <!--HEAD SECTION-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Index</title>
+        <!--Embed Bootstrap Framework here-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+        <!-- Add icon library -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"
+        ></script>
+        <!--Embed css here-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    </head>
+
+    <!--BODY SECTION-->
+    <body>
+        <!--Create a Bootstrap Grid: 4 rows-->
+        <div class="container">
+            <!--Nav Bar Row-->
+            <div class="row" style="min-height: 5vh">
+                <nav
+                    class="bg-primary"
+                    style="
+                        display: flex;
+                        justify-content: space-between;
+                        background-image: linear-gradient(#d5e6d2, #9bbd86);
+                    "
+                >
+                    <div>
+                        <img src="Images/global.png" />
+                        <a class="navbar-brand"><b>ITWD6.408</b></a>
+                    </div>
+                    <ul style="margin: auto; width: 60%; text-align: center">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="forms.html">Forms</a></li>
+                        <li><a href="xml.html">XML/JSON</a></li>
+                        <li>
+                            <a href="javascriptdemo.html">Javascript</a>
+                        </li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                    <div class="menubuttonholder">
+                        <div class="searchicon">🔍︎</div>
+                        <div class="menubutton" onclick="openNav()">
+                            &#9776;
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="myNav" class="overlay">
+                <a
+                    href="javascript:void(0)"
+                    class="closebtn"
+                    onclick="closeNav()"
+                    >&times;</a
+                >
+                <div class="overlay-content">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="forms.html">Forms</a>
+                    <a href="xml.html">XML/JSON</a>
+                    <a href="javascriptdemo.html">JavaScript</a>
+                    <a href="research.html">Research</a>
+                </div>
+            </div>
+
+            <!--Row 1-->
+            <div class="row">
+                <!--Have only one column-->
+                <div class="col-12 px-0">
+                    <div class="showcase">
+                        <img
+                            class="img-fluid d-block mx-auto bg-image"
+                            src="Images/javascript-code.jpg"
+                            style="max-height: 350px"
+                        />
+                    </div>
+                    <div class="bg-text">
+                        <h4>Advanced Internet and Web Learning Portfolio</h4>
+                        <h1>I am Liam Palmers</h1>
+                        <p>And I'm a Web Developer</p>
+                    </div>
+                </div>
+            </div>
+            <!--Row 2-->
+            <div class="row">
+                <!--Divide into 2 column-->
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="row">
+                        <div
+                            class="col-sm-12 col-md-12"
+                            style="background: #e3c701"
+                        >
+                            <h1>Bio</h1>
+                        </div>
+
+                        <div
+                            class="col-sm-12 col-md-3 d-flex align-items-center"
+                            style="background: #e3c701"
+                        >
+                            <img
+                                src="Images/avatar-512.webp"
+                                alt="Portrait"
+                                class="img-fluid d-block"
+                            />
+                        </div>
+
+                        <div
+                            class="col-sm-12 col-md-9"
+                            style="background: #e3c701"
+                        >
+                            <p>
+                                I'm Liam Palmers, with a passion for technology,
+                                especially electronics and mechanics. I've
+                                embarked on this web development journey to
+                                bridge my interests and the digital future. I
+                                hope to gain expertise in web design and
+                                development, aiming to create user-friendly,
+                                visually appealing websites. My goal is to
+                                leverage these skills to make a meaningful
+                                impact in the tech world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="col-sm-12 col-md-6 col-lg-6"
+                    style="background-image: linear-gradient(#f9c9c7, #ea6c68)"
+                >
+                    <h1>My Web Technologies</h1>
+                    <h2>My top 5 Web Technologies</h2>
+                    <ol>
+                        <li>Code Editor: Visual Studio Code</li>
+                        <li>Hosting: Github</li>
+                        <li>Browser: Chrome</li>
+                        <li>Frameworks: Bootstrap, ReactJS, JQuery</li>
+                        <li>Trio Web Language: HTML, CSS, JS</li>
+                    </ol>
+                </div>
+            </div>
+            <!--Row 3-->
+            <div class="row" style="background-color: #cdeb8b">
+                <!--Divide into 3 column-->
+                <div class="col-12">
+                    <h1>My Web Development Competenices</h1>
+                </div>
+            </div>
+
+            <!--Flipboxes here-->
+
+            <div class="row flipboxparentdiv">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <h2>MARK-UP<br />(HTML-5)</h2>
+                            <img src="Images/html5.png" alt="HTML-5" />
+                        </div>
+                        <div class="flip-box-back">
+                            <div>
+                                <h2>Competency</h2>
+                            </div>
+                            <div class="centeredstars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <h2>STYLING<br />(CSS-3)&nbsp;</h2>
+                            <img src="Images/css3.png" alt="CSS-3" />
+                        </div>
+                        <div class="flip-box-back">
+                            <div>
+                                <h2>Competency</h2>
+                            </div>
+                            <div class="centeredstars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <h2>JavaScript<br />(JS)</h2>
+                            <img src="Images/javascript.png" alt="JAVASCRIPT" />
+                        </div>
+                        <div class="flip-box-back">
+                            <div>
+                                <h2>Competency</h2>
+                            </div>
+                            <div class="centeredstars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Row 4-->
+            <div class="row bg-success">
+                <!--Divide into 1 column-->
+                <div class="col-12" style="background-color: #fa6900">
+                    <h1>Statement Of Authenticity</h1>
+                    <p class="offset-1">
+                        “I confirm that:<br /><br />This is an original
+                        assessment and is entirely my own work.<br /><br />It
+                        contains no material previously published or written by
+                        another<br />person or myself except where due
+                        acknowledgement is made in the text.<br /><br />No
+                        material which to a substantial extent, has been
+                        submitted for any other academic course, is included
+                        without acknowledgement.”
+                    </p>
+                </div>
+            </div>
+            <!--Footer-->
+            <div
+                class="row"
+                style="background-image: linear-gradient(#d5e6d2, #9bbd86)"
+            >
+                <!--Col 1: Social media icon-->
+                <div class="col-12 col-sm-12 col-md-4">
+                    <img
+                        src="Images/linkedin-48.png"
+                        style="height: auto; width: 36px"
+                        alt="Linkedin"
+                    />
+                    <img
+                        src="Images/youtube-48.png"
+                        style="height: auto; width: 36px"
+                    />
+                    <img
+                        src="Images/twitter-48.png"
+                        style="height: auto; width: 36px"
+                        alt="Twitter"
+                    />
+                    <img
+                        src="Images/facebook-48.png"
+                        style="height: auto; width: 36px"
+                        alt="Facebook"
+                    />
+                    <img
+                        src="Images/instagram-48.png"
+                        style="height: auto; width: 36px"
+                        alt="Instagram"
+                    />
+                </div>
+                <!--Col 2: Copyright-->
+                <div class="col-8 col-sm-8 col-md-4 text-center">
+                    <p><b>@2023 Created by Liam Palmers</b></p>
+                </div>
+                <!--Col 3: Privacy Policy-->
+                <div class="col-4 col-sm-4 col-md-4 text-end">
+                    <a href="research.html"><b>Privacy Policy</b></a>
+                </div>
+            </div>
+        </div>
+        <!--Embed the Javascript file here-->
+        <script src="JS/javascript-index.js"></script>
+    </body>
+</html>
