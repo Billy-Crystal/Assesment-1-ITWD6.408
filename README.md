@@ -4,6 +4,8 @@
 
 This is the repository for the **Advanced Internet & Web** assignment for Semester 2, 2023, as part of the ITWD6.408 course. This assignment carries a weightage of 40% of the final grade and has a total of 100 marks.
 
+[Link to published website \<published via github\>](https://billy-crystal.github.io/Assesment-1-ITWD6.408/)
+
 ## Table of Contents
 
 1. [Instructions](#instructions)
