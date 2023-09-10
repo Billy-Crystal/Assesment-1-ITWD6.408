@@ -51,7 +51,24 @@
                         <li><a href="research.html">Research</a></li>
                     </ul>
                     <div class="menubuttonholder">
-                        <div class="searchicon">🔍︎</div>
+                        <div>
+                            <span class="searchicon" id="openModalBtn">
+                                🔍︎
+                            </span>
+                            <div id="searchModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close" id="closeModalBtn"
+                                        >&times;</span
+                                    >
+                                    <input
+                                        type="text"
+                                        id="searchInput"
+                                        placeholder="Search on Google"
+                                    />
+                                    <button id="searchButton">Search</button>
+                                </div>
+                            </div>
+                        </div>
                         <div class="menubutton" onclick="openNav()">
                             &#9776;
                         </div>
@@ -166,7 +183,7 @@
                                 id="multiCollapseExample1"
                             >
                                 <div
-                                    class="card card-body border-0"
+                                    class="card card-body border-0 mb-1"
                                     style="
                                         background-image: linear-gradient(
                                             #f0f0f0,
@@ -244,7 +261,7 @@
                                 id="multiCollapseExample2"
                             >
                                 <div
-                                    class="card card-body border-0"
+                                    class="card card-body border-0 mb-1"
                                     id="demo-2"
                                     style="
                                         background-image: linear-gradient(
@@ -369,7 +386,7 @@
                                 id="multiCollapseExample3"
                             >
                                 <div
-                                    class="card card-body border-0"
+                                    class="card card-body border-0 mb-1"
                                     style="
                                         background-image: linear-gradient(
                                             #f0f0f0,
@@ -450,7 +467,7 @@
                                 id="multiCollapseExample4"
                             >
                                 <div
-                                    class="card card-body border-0"
+                                    class="card card-body border-0 mb-1"
                                     style="
                                         background-image: linear-gradient(
                                             #f0f0f0,

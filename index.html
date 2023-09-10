@@ -54,7 +54,24 @@
                         <li><a href="research.html">Research</a></li>
                     </ul>
                     <div class="menubuttonholder">
-                        <div class="searchicon">🔍︎</div>
+                        <div>
+                            <span class="searchicon" id="openModalBtn">
+                                🔍︎
+                            </span>
+                            <div id="searchModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close" id="closeModalBtn"
+                                        >&times;</span
+                                    >
+                                    <input
+                                        type="text"
+                                        id="searchInput"
+                                        placeholder="Search on Google"
+                                    />
+                                    <button id="searchButton">Search</button>
+                                </div>
+                            </div>
+                        </div>
                         <div class="menubutton" onclick="openNav()">
                             &#9776;
                         </div>

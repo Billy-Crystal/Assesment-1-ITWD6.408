@@ -50,7 +50,24 @@
                         <li><a href="research.html">Research</a></li>
                     </ul>
                     <div class="menubuttonholder">
-                        <div class="searchicon">🔍︎</div>
+                        <div>
+                            <span class="searchicon" id="openModalBtn">
+                                🔍︎
+                            </span>
+                            <div id="searchModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close" id="closeModalBtn"
+                                        >&times;</span
+                                    >
+                                    <input
+                                        type="text"
+                                        id="searchInput"
+                                        placeholder="Search on Google"
+                                    />
+                                    <button id="searchButton">Search</button>
+                                </div>
+                            </div>
+                        </div>
                         <div class="menubutton" onclick="openNav()">
                             &#9776;
                         </div>
@@ -124,7 +141,7 @@
                             class="multi-collapse collapse"
                             id="multiCollapseExample1"
                         >
-                            <div class="card card-body">
+                            <div class="card card-body mb-1">
                                 <!--XML rules area-->
                                 <h2>XML SYNTAX RULES</h2>
                                 <p>
@@ -278,7 +295,7 @@
                             class="multi-collapse collapse"
                             id="multiCollapseExample2"
                         >
-                            <div class="card card-body">
+                            <div class="card card-body mb-1">
                                 <!--RSS RULES-->
                                 <h2>LOAD RSS FROM NASA WEBSITE</h2>
                                 <button type="button" onclick="loadRSS()">
