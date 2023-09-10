@@ -1,28 +1,11 @@
-function loadRSS() {
-    //Use CORS API website as proxy
-    let proxy = "https://cors-anywhere.herokuapp.com/";
+function openNav() {
+    document.getElementById("myNav").style.display =
+        "block"; /*Show the curtain menu*/
+}
 
-    //Declare the URL where we fetch RSS file
-    let url = "https://www.nasa.gov/rss/dyn/educationnews.rss";
-    //NASA RSS: https://www.nasa.gov/content/nasa-rss-feeds
-    //     NASA education news: https://www.nasa.gov/rss/dyn/educationnews.rss
-    //CNN RSS: https://edition.cnn.com/services/rss/
-    //    CNN RSS top stories: http://rss.cnn.com/rss/edition.rss
-    //BBC RSS: http://feeds.bbci.co.uk/news/rss.xml
-
-    //Create an XMLHttpRequest Object to request XML file (data) through HTTP protocol
-    let xhttp = new XMLHttpRequest();
-    xhttp.open("GET", proxy + url, true);
-    xhttp.send();
-
-    //Process RSS file when it has been loaded successfully
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            //Load XML file as "XML" format and parse/process it by calling function parseRSS()
-            let rss = this.responseXML;
-            parseRSS(rss);
-        }
-    };
+function closeNav() {
+    document.getElementById("myNav").style.display =
+        "none"; /*Hide the curtain menu*/
 }
 
 //Data: assume we have a list of top 5 movies
@@ -109,42 +92,6 @@ function autoSlideShow() {
 //execute the function when loading the webpage
 autoSlideShow(); // Call to run auto slideshow
 
-function parseRSS(rss) {
-    //Load all "items" inside the RSS document, each item is a news
-    let items = rss.getElementsByTagName("item");
-    let rssContent = ""; //varible "rssContent" is used to store rss content in HTML format
-
-    //Loop through all "items" (news) and extract child node content: "title", "link", "description" and "pubdate"
-    for (let i = 0; i < items.length; i++) {
-        let nodes = items[i].children;
-        //Extract "title", "link", "description" and "pubdate" of each "node"
-        let title, pubdate, description, link;
-        for (let j = 0; j < nodes.length; j++) {
-            if (nodes[j].tagName == "title") {
-                title = nodes[j].childNodes[0].nodeValue;
-            } else if (nodes[j].tagName == "link") {
-                link = nodes[j].childNodes[0].nodeValue;
-            } else if (nodes[j].tagName == "description") {
-                description = nodes[j].childNodes[0].nodeValue;
-            } else if (nodes[j].tagName == "pubDate") {
-                pubdate = nodes[j].childNodes[0].nodeValue;
-            }
-        }
-
-        //Format the extracted information above in HTML format and append it to the "rssContent" variable
-        //each item (news) is wrapped inside a <div>
-        rssContent += `<div class="col-12 col-md-6">
-                          <div style="background-color: lightgray; margin: 1em; height: 95%">
-                              <h3>${title}</h3>
-                              <p style="font-style: italic;">${pubdate}</p>
-                              <p>${description}</p>
-                              <p><a href="${link}">Read more</a></p>
-                          </div>	
-                      </div>`;
-    }
-    //Display the "rssContent" on the webpage
-    document.getElementById("rssFeed").innerHTML = rssContent;
-}
 //DROPDOWN MENU TO SELECT MOVIE
 //Populate the select "options" with all the movies in the array when the page is loaded
 function loadMyMovies() {
@@ -260,4 +207,62 @@ function AddItemToList() {
         document.getElementById("my-movie-year").value = "";
         document.getElementById("my-movie-image-url").value = "";
     }
+}
+
+//------------------------------------------------------------------------------------------------------
+//ADD NEW COMMENT
+//Data: Assume we have a list of existing comments stored in an array "allComments"
+let allComments = [
+    { name: "Ian", comment: "Recommended, good one" },
+    { name: "Aman", comment: "I don't like this movie" },
+    { name: "John", comment: "Love it" },
+];
+
+//----------
+//Load all existing comments and display them on HTML
+function loadComments() {
+    //Loop through all comments in the array "allComments"
+    for (var i = 0; i < allComments.length; i++) {
+        let name = allComments[i].name;
+        let comment = allComments[i].comment;
+        //
+        //Create a new HTML node/element <P> to display this comment
+        let node = document.createElement("P");
+        let textnode = document.createTextNode(name + ": " + comment);
+        node.appendChild(textnode); //Append the content (created TextNode) to the HTML Node (child)
+        let parrent_node = document.getElementById("comment-list"); //Get the id of parent node "comment-list"
+        parrent_node.appendChild(node); //Append the above child HTML node to the parent node
+    }
+}
+//Call to run this loadComments function when the webpage is loaded.
+loadComments();
+
+//----------
+//Add a new comment
+function addComment() {
+    //Get entered value/data by user
+    let enteredCommentName = document.getElementById("comment_name").value;
+    let enteredCommentText = document.getElementById("comment_text").value;
+
+    //Add this new comment to the array
+    allComments.push({ name: enteredCommentName, comment: enteredCommentText });
+    alert("Thank you for your comment!");
+
+    //Display this new comment on HTML page
+    //Create a new child HTML node/element as "<p>" (paragraph) (as a child node)
+    let node = document.createElement("P");
+    //Create a new TextNode
+    let textnode = document.createTextNode(
+        enteredCommentName + ": " + enteredCommentText
+    );
+    //Append the content (created TextNode) to the HTML Node (child)
+    node.appendChild(textnode);
+    //Get the id of parent node "comment-list"
+    let parrent_node = document.getElementById("comment-list");
+    //Append the above child HTML node to the parent node
+    parrent_node.appendChild(node);
+
+    //Clear comment box
+    document.getElementById("comment_name").value = "";
+    document.getElementById("comment_text").value = "";
 }

@@ -3,10 +3,7 @@
     <!--HEAD SECTION-->
     <head>
         <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale: 1.0"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>XML</title>
 
         <!--Embed Bootstrap Framework here-->
@@ -29,58 +26,51 @@
     <body>
         <!--Create a Bootstrap Grid: 4 rows-->
         <div class="container">
-            <!--Row 1 - Nav Bar Row-->
-            <div
-                class="row bg-primary overflow-visible"
-                style="min-height: 8vh"
-            >
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Logo and Tagline</a>
-                        <button
-                            class="navbar-toggler"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarText"
-                            aria-controls="navbarText"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                        >
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div
-                            class="collapse navbar-collapse z-3"
-                            id="navbarText"
-                        >
-                            <ul
-                                class="navbar-nav me-auto mb-2 mb-lg-0 text-end bg-success"
-                            >
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        aria-current="page"
-                                        href="#"
-                                        >HOME</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#"
-                                        >FORMS</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">XML/JSON</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">JAVASCRIPT</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">RESEARCH</a>
-                                </li>
-                            </ul>
+            <!--Nav Bar Row-->
+            <div class="row" style="min-height: 5vh">
+                <nav
+                    class="bg-primary"
+                    style="
+                        display: flex;
+                        justify-content: space-between;
+                        background-image: linear-gradient(#d5e6d2, #9bbd86);
+                    "
+                >
+                    <div>
+                        <img src="Images/global.png" />
+                        <a class="navbar-brand"><b>ITWD6.408</b></a>
+                    </div>
+                    <ul style="margin: auto; width: 60%; text-align: center">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="forms.html">Forms</a></li>
+                        <li><a href="xml.html" class="active">XML/JSON</a></li>
+                        <li>
+                            <a href="javascriptdemo.html">Javascript</a>
+                        </li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                    <div class="menubuttonholder">
+                        <div class="searchicon">🔍︎</div>
+                        <div class="menubutton" onclick="openNav()">
+                            &#9776;
                         </div>
                     </div>
                 </nav>
+            </div>
+            <div id="myNav" class="overlay">
+                <a
+                    href="javascript:void(0)"
+                    class="closebtn"
+                    onclick="closeNav()"
+                    >&times;</a
+                >
+                <div class="overlay-content">
+                    <a href="index.html">Home</a>
+                    <a href="forms.html">Forms</a>
+                    <a href="xml.html" class="active">XML/JSON</a>
+                    <a href="javascriptdemo.html">JavaScript</a>
+                    <a href="research.html">Research</a>
+                </div>
             </div>
 
             <!--Row 2 - Button and Form-->
@@ -335,11 +325,11 @@
                 </div>
                 <!--Col 2: Copyright-->
                 <div class="col-8 col-sm-8 col-md-4 text-center">
-                    <p>@2023 Created by Liam Palmers</p>
+                    <p><b>@2023 Created by Liam Palmers</b></p>
                 </div>
                 <!--Col 3: Privacy Policy-->
                 <div class="col-4 col-sm-4 col-md-4 text-end">
-                    <p>Privacy Policy</p>
+                    <a href="research.html"><b>Privacy Policy</b></a>
                 </div>
             </div>
         </div>
@@ -444,6 +434,6 @@
             });
         </script>
         <!--Embed the Javascript file here-->
-        <script src="JS/javascript.js"></script>
+        <script src="JS/javascript-xml.js"></script>
     </body>
 </html>

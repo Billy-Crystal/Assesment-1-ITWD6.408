@@ -3,10 +3,7 @@
     <!--HEAD SECTION-->
     <head>
         <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale: 1.0"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Javascript Demo</title>
         <!--Embed Bootstrap framework here-->
         <link
@@ -28,59 +25,53 @@
     <body>
         <!--Create a Bootstrap grid: 4 rows-->
         <div class="container">
-            <!--ROW 1: NAVBAR-->
-            <div
-                class="row bg-primary overflow-visible"
-                style="min-height: 8vh"
-            >
-                <nav class="navbar navbar-expand-lg bg-body-tertiary row">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Logo and Tagline</a>
-                        <button
-                            class="navbar-toggler"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarText"
-                            aria-controls="navbarText"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                        >
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div
-                            class="collapse navbar-collapse z-3"
-                            id="navbarText"
-                        >
-                            <ul
-                                class="navbar-nav me-auto mb-2 mb-lg-0 text-end bg-success"
+            <!--Nav Bar Row-->
+            <div class="row" style="min-height: 5vh">
+                <nav
+                    class="bg-primary"
+                    style="
+                        display: flex;
+                        justify-content: space-between;
+                        background-image: linear-gradient(#d5e6d2, #9bbd86);
+                    "
+                >
+                    <div>
+                        <img src="Images/global.png" />
+                        <a class="navbar-brand"><b>ITWD6.408</b></a>
+                    </div>
+                    <ul style="margin: auto; width: 60%; text-align: center">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="forms.html">Forms</a></li>
+                        <li><a href="xml.html">XML/JSON</a></li>
+                        <li>
+                            <a href="javascriptdemo.html" class="active"
+                                >Javascript</a
                             >
-                                <li class="nav-item">
-                                    <a
-                                        class="nav-link"
-                                        aria-current="page"
-                                        href="#"
-                                        >HOME</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#"
-                                        >FORMS</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">XML/JSON</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">JAVASCRIPT</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">RESEARCH</a>
-                                </li>
-                            </ul>
+                        </li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                    <div class="menubuttonholder">
+                        <div class="searchicon">🔍︎</div>
+                        <div class="menubutton" onclick="openNav()">
+                            &#9776;
                         </div>
                     </div>
                 </nav>
+            </div>
+            <div id="myNav" class="overlay">
+                <a
+                    href="javascript:void(0)"
+                    class="closebtn"
+                    onclick="closeNav()"
+                    >&times;</a
+                >
+                <div class="overlay-content">
+                    <a href="index.html">Home</a>
+                    <a href="forms.html">Forms</a>
+                    <a href="xml.html">XML/JSON</a>
+                    <a href="javascriptdemo.html" class="active">JavaScript</a>
+                    <a href="research.html">Research</a>
+                </div>
             </div>
 
             <!--ROW 2: 4 BUTTONS-->
@@ -175,11 +166,17 @@
                                 id="multiCollapseExample1"
                             >
                                 <div
-                                    class="card card-body border-0 bg-secondary"
+                                    class="card card-body border-0"
+                                    style="
+                                        background-image: linear-gradient(
+                                            #f0f0f0,
+                                            #b2b2b2
+                                        );
+                                    "
                                 >
                                     <!--DEMO 1 AREA-->
                                     <h2 class="bg-warning">
-                                        Demo 1: Create Manul Slideshow And
+                                        Demo 1: Create Manual Slideshow And
                                         Automatic Slideshow For Top Movies
                                     </h2>
                                     <section class="container">
@@ -193,17 +190,39 @@
                                             height="300px"
                                         />
                                         <br />
-                                        <button onclick="previousSlide()">
+                                        <button
+                                            onclick="previousSlide()"
+                                            style="
+                                                background-color: #f4bb1c;
+                                                color: black;
+                                                border: 1px solid black;
+                                                border-radius: 5px;
+                                                padding: 10px 20px;
+                                                cursor: pointer;
+                                                font-size: 16px;
+                                            "
+                                        >
                                             PREVIOUS
                                         </button>
-                                        <button onclick="nextSlide()">
+                                        <button
+                                            onclick="nextSlide()"
+                                            style="
+                                                background-color: #f4bb1c;
+                                                color: black;
+                                                border: 1px solid black;
+                                                border-radius: 5px;
+                                                padding: 10px 20px;
+                                                cursor: pointer;
+                                                font-size: 16px;
+                                            "
+                                        >
                                             NEXT
                                         </button>
                                     </section>
 
                                     <section class="container">
                                         <h3>
-                                            Automatical Slideshow: running
+                                            Automatic Slideshow: running
                                             automatically
                                         </h3>
                                         <h4 id="auto-slide-title">
@@ -224,7 +243,16 @@
                                 class="multi-collapse collapse"
                                 id="multiCollapseExample2"
                             >
-                                <div class="card card-body" id="demo-2">
+                                <div
+                                    class="card card-body border-0"
+                                    id="demo-2"
+                                    style="
+                                        background-image: linear-gradient(
+                                            #f0f0f0,
+                                            #b2b2b2
+                                        );
+                                    "
+                                >
                                     <!---DEMO 2 AREA-->
                                     <h2 class="bg-warning">
                                         Demo 2: Customize the Webpage:
@@ -319,6 +347,15 @@
                                         id="expandBtn"
                                         onclick="expandText()"
                                         value="MORE"
+                                        style="
+                                            background-color: #f4bb1c;
+                                            color: black;
+                                            border: 1px solid black;
+                                            border-radius: 5px;
+                                            padding: 10px 20px;
+                                            cursor: pointer;
+                                            font-size: 16px;
+                                        "
                                     >
                                         MORE
                                     </button>
@@ -331,7 +368,15 @@
                                 class="multi-collapse collapse"
                                 id="multiCollapseExample3"
                             >
-                                <div class="card card-body">
+                                <div
+                                    class="card card-body border-0"
+                                    style="
+                                        background-image: linear-gradient(
+                                            #f0f0f0,
+                                            #b2b2b2
+                                        );
+                                    "
+                                >
                                     <!---DEMO 3 AREA-->
                                     <h2 class="bg-warning">
                                         Demo 3: Dropdown Menu To Select A Movie
@@ -357,7 +402,10 @@
                                     <h2 class="bg-warning">
                                         ADD NEW MOVIE TO THE LIST ABOVE
                                     </h2>
-                                    <section class="container">
+                                    <section
+                                        class="container"
+                                        style="text-align: center"
+                                    >
                                         <h4>
                                             Add new item (movie) to the exisitng
                                             list:
@@ -401,9 +449,66 @@
                                 class="multi-collapse collapse"
                                 id="multiCollapseExample4"
                             >
-                                <div class="card card-body">
+                                <div
+                                    class="card card-body border-0"
+                                    style="
+                                        background-image: linear-gradient(
+                                            #f0f0f0,
+                                            #b2b2b2
+                                        );
+                                    "
+                                >
                                     <!---DEMO 4 AREA-->
-                                    <h2>DEMO 4: ....</h2>
+                                    <h2 class="bg-warning">
+                                        Demo 4: Add A New Comment
+                                    </h2>
+                                    <section class="container">
+                                        <h4 id="my-movieTitle">
+                                            The Shawshank Redemption
+                                        </h4>
+                                        <p id="my-movieYear">1994</p>
+                                        <img
+                                            id="my-movieImageURL"
+                                            src="Images/movie0.jpg"
+                                            height="300px"
+                                        />
+                                        <br />
+
+                                        <h4>Comments:</h4>
+                                        <div id="comment-list"></div>
+
+                                        <h4>Add your comment:</h4>
+                                        <label>Name: </label>
+                                        <input
+                                            type="text"
+                                            id="comment_name"
+                                            placeholder="your name"
+                                            size="90"
+                                        />
+                                        <br />
+                                        <label>Comment: </label><br />
+                                        <textarea
+                                            id="comment_text"
+                                            cols="100"
+                                            rows="10"
+                                        >
+                                        </textarea>
+                                        <br />
+                                        <button
+                                            onclick="addComment()"
+                                            style="
+                                                background-color: #f4bb1c;
+                                                color: black;
+                                                border: 1px solid black;
+                                                border-radius: 5px;
+                                                padding: 10px 20px;
+                                                cursor: pointer;
+                                                font-size: 16px;
+                                            "
+                                        >
+                                            POST
+                                        </button>
+                                    </section>
                                 </div>
                             </div>
                         </div>
@@ -443,13 +548,13 @@
                         alt="Instagram"
                     />
                 </div>
-                <!--Col 2: copy right-->
-                <div class="col-8 col-md-4 text-center">
-                    <p>@2023 by Liam Palmers</p>
+                <!--Col 2: Copyright-->
+                <div class="col-8 col-sm-8 col-md-4 text-center">
+                    <p><b>@2023 Created by Liam Palmers</b></p>
                 </div>
-                <!--Col 3: privacy policy-->
-                <div class="col-4 col-md-4 text-end">
-                    <p>Privacy Policy</p>
+                <!--Col 3: Privacy Policy-->
+                <div class="col-4 col-sm-4 col-md-4 text-end">
+                    <a href="research.html"><b>Privacy Policy</b></a>
                 </div>
             </div>
         </div>
@@ -513,6 +618,6 @@
             });
         </script>
         <!--Embed the Javascript file here-->
-        <script src="JS/javascript.js"></script>
+        <script src="JS/javascript-javascriptdemo.js"></script>
     </body>
 </html>
